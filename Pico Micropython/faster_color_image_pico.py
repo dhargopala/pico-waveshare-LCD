@@ -18,7 +18,7 @@ while True:
         break
     px_ptr = 0
     # All Even Positions will be Pixel Counts and
-    # all odd positions will be Pixel Color Values
+    # odd positions will be Pixel Color Values
     data = data.split(',')
     for i in range(len(data)):
         # Reading Count of Homogenous Pixels
@@ -27,11 +27,7 @@ while True:
         # Reading the Color of the Homogenous Pixels
         else:
             color = int('0x'+data[i])
-            for j in range(px_ptr,px_count+px_ptr):
-                # Ignoring Pixels having save color as background
-                if color == background:
-                    break
-                LCD.pixel(j,row_count,color)       
+            LCD.hline(px_ptr,row_count,px_count,color)            
             px_ptr += px_count
             
     LCD.show()

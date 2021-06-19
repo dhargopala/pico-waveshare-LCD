@@ -1,6 +1,8 @@
 # pico-waveshare-LCD
 ## This repository contains code that can be used to interface Waveshare LCD Hat (1.3") for Raspberry Pi Pico
-
+<p align="center">
+  <img src="pico_demo.gif" />
+</p>
 The Pico has memory constraint of 256K, which means most color images cannot be directly displayed on any screen conneted to it.
 If we try to load the whole image in memory, we get an out of memory error, as the Pico does not have enough memory to allocate.
 In this code, instead of reading the whole image and storing it in memory of Pico, I've read the image line-by-line and updated the relevant pixels on screen,

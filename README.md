@@ -8,6 +8,8 @@ such that the memory consumption is minimal. This however makes the image displa
 
 **NOTE: Copy the files in "Pico Micropython directory" to the Raspberry Pi Pico**
 
+**EDIT: A newer,faster and low memory implementation has been included**
+
 ## For Binary Images
 * Paste the binary image (eg: QR Code, Barcode) in the same directory on your local machine
 * In binary_image.py change file_name variable to the name of the image
@@ -16,7 +18,15 @@ such that the memory consumption is minimal. This however makes the image displa
 * Open the binary_image_pico.py file and change the file_name to the name of newly pasted file
 * Run binary_image_pico.py
 
-## For Color Images
+## For Color Images (Faster with Low Memory Usage)
+* Paste the color image in the same directory on your local machine
+* In faster_color_image.py change file_name variable to the name of the image
+* Run the python file
+* Either copy the newly generated file directly to the Pico or copy the contents of this file to a new file in Pico and save it
+* Open the faster_color_image_pico.py file and change the file_name to the name of newly pasted file
+* Run faster_color_image_pico.py
+
+## For Color Images (Slower)
 * Paste the color image in the same directory on your local machine
 * In img2img565.py change file_name variable to the name of the image
 * Run the python file
@@ -24,4 +34,3 @@ such that the memory consumption is minimal. This however makes the image displa
 * Open the colour_image_pico.py file and change the file_name to the name of newly pasted file
 * Run colour_image_pico.py
 
-Do note that binary_image_pico.py file runs faster for the Binary files as compared to colour_image_pico.py file due to the nature of the encoding used for binary files

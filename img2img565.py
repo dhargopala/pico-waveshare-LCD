@@ -22,7 +22,7 @@ file_name = file_name.split('.')[0]
 
 def rgb_hex565(rgb):
     ''' Args:
-            rbg: tuple having B,G,R values in decimal format
+            rgb: tuple having B,G,R values in decimal format
             
         Returns:
             64K Hexadecial image color code as a string

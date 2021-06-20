@@ -27,7 +27,8 @@ while True:
         # Reading the Color of the Homogenous Pixels
         else:
             color = int('0x'+data[i])
-            LCD.hline(px_ptr,row_count,px_count,color)            
+            if color != background:
+                LCD.hline(px_ptr,row_count,px_count,color)            
             px_ptr += px_count
             
     LCD.show()
